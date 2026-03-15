@@ -1,0 +1,339 @@
+/* ── Work Section ── */
+.work-section {
+  position: relative;
+  z-index: 1;
+  background-color: var(--backgroundColor);
+  padding: 80px 0;
+  /* Prevent any vertical or horizontal bleed at the section level */
+  overflow: hidden;
+}
+
+.work-section h2 {
+  font-size: 70px;
+  font-weight: 500;
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+.work-section h2>span {
+  color: var(--accentColor);
+}
+
+.subtitle {
+  font-weight: 200;
+  opacity: 0.7;
+  margin-bottom: 40px;
+  display: block;
+  font-size: 18px;
+}
+
+.work-container {
+  margin: auto;
+}
+
+/* ── Awards Banner (fixed for one-line trophies) ── */
+.awards-banner {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  background: rgba(255, 255, 255, 0.03);
+  padding: 15px 25px;
+  border-radius: 50px;
+  margin-bottom: 50px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  width: fit-content;
+  max-width: 100%;
+  white-space: nowrap;
+  /* Forces content on one line */
+  overflow-x: auto;
+}
+
+.awards-banner::-webkit-scrollbar {
+  display: none;
+}
+
+.award-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #eae5ec;
+  font-size: 14px;
+  flex-shrink: 0;
+}
+
+.award-icon {
+  color: #ffd700;
+  font-size: 22px;
+  flex-shrink: 0;
+}
+
+.award-name {
+  font-weight: 400;
+  letter-spacing: 0.5px;
+}
+
+.award-divider {
+  width: 1px;
+  height: 20px;
+  background: rgba(255, 255, 255, 0.1);
+  flex-shrink: 0;
+}
+
+/* ── Carousel Logic: CRITICAL FOR SLIPPAGE FIX ── */
+.carousel-wrapper {
+  position: relative;
+  width: 100%;
+}
+
+.carousel-track-container {
+  /* THE FIX: Prevents children from showing in adjacent viewports */
+  overflow: hidden;
+  width: 100%;
+  border-top: 1px solid #363636;
+  border-bottom: 1px solid #363636;
+}
+
+.carousel-track {
+  display: flex;
+  transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  will-change: transform;
+}
+
+.carousel-slide {
+  /* Forces each slide to be exactly 100% of the viewport */
+  min-width: 100%;
+  max-width: 100%;
+  flex-shrink: 0;
+  box-sizing: border-box;
+  padding: 50px 0;
+  /* Extra safety: prevents slide content from escaping */
+  overflow: hidden;
+}
+
+.carousel-content {
+  display: flex;
+  align-items: center;
+  gap: 60px;
+  width: 100%;
+  /* Ensures total content doesn't exceed 100% slide width */
+  max-width: 100%;
+}
+
+/* ── Info Side ── */
+.carousel-info {
+  flex: 1.2;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.carousel-top-meta {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.slide-num {
+  font-size: 40px;
+  font-weight: 700;
+  opacity: 0.2;
+  line-height: 1;
+}
+
+.category-tag {
+  background: var(--accentColor);
+  color: #000;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.title-area {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.feature-icon {
+  font-size: 32px;
+  color: var(--accentColor);
+}
+
+.carousel-details h4 {
+  font-size: 32px;
+  font-weight: 500;
+  margin: 0;
+}
+
+.carousel-description {
+  font-weight: 200;
+  color: #adacac;
+  line-height: 1.6;
+  font-size: 16px;
+  margin: 0;
+}
+
+/* ── Impact Box ── */
+.impact-box {
+  background: rgba(94, 234, 212, 0.05);
+  border-left: 3px solid var(--accentColor);
+  padding: 15px;
+  border-radius: 4px;
+  margin: 10px 0;
+}
+
+.impact-box h5 {
+  margin: 0 0 5px 0;
+  font-size: 13px;
+  color: var(--accentColor);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.impact-box p {
+  margin: 0;
+  font-size: 15px;
+  font-weight: 400;
+  color: #eee;
+}
+
+.carousel-tools .tools-label {
+  font-size: 12px;
+  opacity: 0.5;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  display: block;
+}
+
+.carousel-tools p {
+  font-weight: 200;
+  color: #adacac;
+  margin: 6px 0 0;
+  font-size: 15px;
+}
+
+/* ── Image Wrapper Fixes (CRITICAL) ── */
+.carousel-image-wrapper {
+  flex: 0.8;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* THE FIX: Clips any massive image from going wide */
+  overflow: hidden;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.02);
+  /* Lock the container height, forcing image scaling */
+  height: 400px;
+  position: relative;
+}
+
+.carousel-image-wrapper img {
+  width: 100%;
+  height: 100%;
+  /* THE FIX: Fits image into height/width without overflowing */
+  object-fit: contain;
+  transition: transform 0.5s ease;
+}
+
+.image-overlay-gradient {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, transparent 60%, var(--backgroundColor));
+  pointer-events: none;
+}
+
+/* ── Navigation & Dots ── */
+.carousel-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: #eae5ec;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(8px);
+}
+
+.carousel-arrow:hover {
+  background: rgba(94, 234, 212, 0.15);
+  border-color: var(--accentColor);
+  color: var(--accentColor);
+  box-shadow: 0 0 20px rgba(94, 234, 212, 0.15);
+}
+
+.carousel-arrow-left {
+  left: -70px;
+}
+
+.carousel-arrow-right {
+  right: -70px;
+}
+
+.carousel-dots {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 35px;
+}
+
+.carousel-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  background: transparent;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.carousel-dot-active {
+  background: var(--accentColor);
+  border-color: var(--accentColor);
+  box-shadow: 0 0 8px rgba(94, 234, 212, 0.4);
+}
+
+/* ── Responsive ── */
+@media (max-width: 1400px) {
+  .work-section h2 {
+    font-size: 50px;
+  }
+
+  .carousel-arrow-left {
+    left: 10px;
+  }
+
+  .carousel-arrow-right {
+    right: 10px;
+  }
+}
+
+@media (max-width: 1025px) {
+  .carousel-content {
+    flex-direction: column;
+    gap: 30px;
+    align-items: flex-start;
+  }
+
+  .carousel-image-wrapper {
+    width: 100%;
+    /* Shrink the image container for mobile */
+    height: 300px;
+  }
+
+  .carousel-info {
+    width: 100%;
+  }
+}
