@@ -20,18 +20,15 @@ const imageUrls = [
   "/images/aws2.png",
   "/images/GCP2.png",
   "/images/ansible2.png",
-  "/images/bash.png",
+  "/images/bash2.png",
   "/images/ghe.png",
   "/images/BB2.png",
   "/images/jenkins2.png",
   "/images/harness2.png",
-  // "/images/next2.webp",
-  // "/images/node2.webp",
-  // "/images/express.webp",
-  // "/images/mongo.webp",
-  // "/images/mysql.webp",
-  // "/images/typescript.webp",
-  // "/images/javascript.webp",
+  "/images/tekton2.png",
+  "/images/maven2.png",
+  "/images/grafana2.png",
+  "/images/helm2.png",
 ];
 const textures = imageUrls.map((url) => textureLoader.load(url));
 
