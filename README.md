@@ -9,7 +9,7 @@ I have modified the gsap club plugins with the trial plugins, but with the trial
 
 **Techstack** - AWS Cloud, Docker, OpenShift, Terraform, Google Cloud, Shell Script, Jenkins, GitHub, Maven, Ansible, Kubernetes
 
-![Portfolio-Preview](public/images/preview.png)
+![Portfolio-Preview](public/images/prafulla_preview.png)
 
 ## License
 
