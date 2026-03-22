@@ -491,7 +491,7 @@ const achievements = [
     tools: "Jenkins, Docker, Maven, Terraform, Harness",
     impact: "Accelerated deployment frequency by 40% and reduced manual intervention by 75% across enterprise workflows.",
     description: "Architected end-to-end pipelines using Infrastructure as Code (IaC) to streamline build, test, and deployment cycles for global financial systems.",
-    image: "/images/architecture.png",
+    image: "./images/architecture.png",
   },
   {
     title: "Cloud Infrastructure Optimization",
@@ -500,7 +500,7 @@ const achievements = [
     tools: "EC2, S3, RDS, VPC, Auto Scaling, ELB",
     impact: "Achieved 99.99% system availability while optimizing cloud spend through strategic Auto Scaling and VPC architecture.",
     description: "Engineered highly resilient AWS environments, ensuring peak performance and security compliance for mission-critical applications.",
-    image: "/images/Cloud-Infrastructure-Optimization.png",
+    image: "./images/Cloud-Infrastructure-Optimization.png",
   },
   {
     title: "Containerization Leadership",
@@ -509,7 +509,7 @@ const achievements = [
     tools: "OpenShift, Helm Charts, Kubernetes, Docker",
     impact: "Migrated legacy monoliths to microservices, improving resource utilization by 50% and enabling seamless scaling.",
     description: "Spearheaded enterprise container strategies, managing cluster orchestration and automated scaling via OpenShift and Helm.",
-    image: "/images/Kubernetes.png",
+    image: "./images/Kubernetes.png",
   },
   {
     title: "Proactive Monitoring & Analytics",
@@ -518,7 +518,7 @@ const achievements = [
     tools: "AppDynamics, Kibana, ElasticSearch, Nagios",
     impact: "Reduced Mean Time to Recovery (MTTR) by 60% through real-time fault detection and advanced log analytics.",
     description: "Designed comprehensive monitoring dashboards providing critical insights into system performance and proactive incident management.",
-    image: "/images/Proactive-monitoring.jpeg",
+    image: "./images/Proactive-monitoring.jpeg",
   },
   {
     title: "Automation & Shell Scripting",
@@ -527,7 +527,7 @@ const achievements = [
     tools: "Bash, Python, Unix/Linux, Ansible",
     impact: "Automated 100+ repetitive environment management tasks, saving 20+ engineering hours per week.",
     description: "Developed robust automation scripts and configuration management playbooks to drive operational excellence and eliminate human error.",
-    image: "/images/bash-function-tutorial-with-examples.png",
+    image: "./images/bash-function-tutorial-with-examples.png",
   }
 ];
 
