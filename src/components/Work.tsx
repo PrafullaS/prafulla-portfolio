@@ -482,6 +482,7 @@ import {
   MdTerminal,
   MdAnalytics
 } from "react-icons/md";
+import AnimatedPipeline from "./AnimatedPipeline";
 
 const achievements = [
   {
@@ -585,6 +586,8 @@ const Work = () => {
             <span className="award-name">Service Commitment (TCS)</span>
           </div>
         </div>
+
+        <AnimatedPipeline />
 
         <div className="carousel-wrapper">
           <button className="carousel-arrow carousel-arrow-left" onClick={goToPrev} data-cursor="disable">

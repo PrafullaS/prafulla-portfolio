@@ -281,6 +281,37 @@ const WhatIDo = () => {
               <div className="what-arrow"></div>
             </div>
           </div>
+
+          {/* SECTION 3: SECURITY & COMPLIANCE */}
+          <div className="what-content what-noTouch" ref={(el) => setRef(el, 2)}>
+            <div className="what-border1">
+              <svg height="100%">
+                <line x1="0" y1="100%" x2="100%" y2="100%" stroke="white" strokeWidth="2" strokeDasharray="6,6" />
+              </svg>
+            </div>
+            <div className="what-corner"></div>
+            <div className="what-content-in">
+              <h3>SECURITY</h3>
+              <h4>DevSecOps & Compliance</h4>
+              <p>
+                Embedding security into every stage of the pipeline. Implementing
+                vulnerability scanning, secrets management, and regulatory compliance
+                controls within high-stakes enterprise environments.
+              </p>
+              <h5>Skillset & tools</h5>
+              <div className="what-content-flex">
+                <div className="what-tags">SonarQube</div>
+                <div className="what-tags">Vault</div>
+                <div className="what-tags">OWASP</div>
+                <div className="what-tags">Trivy</div>
+                <div className="what-tags">IAM</div>
+                <div className="what-tags">CloudTrail</div>
+                <div className="what-tags">Compliance</div>
+                <div className="what-tags">RBAC</div>
+              </div>
+              <div className="what-arrow"></div>
+            </div>
+          </div>
         </div>
       </div>
     </div>

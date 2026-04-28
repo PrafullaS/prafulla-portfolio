@@ -1,0 +1,118 @@
+.certs-section {
+  padding: 60px 0;
+}
+
+.certs-container {
+  width: var(--cWidth);
+  max-width: var(--cMaxWidth);
+  margin: auto;
+}
+
+.certs-subtitle {
+  color: rgba(255,255,255,0.45);
+  font-size: 14px;
+  letter-spacing: 0.5px;
+  margin: -8px 0 36px 0;
+  max-width: 520px;
+}
+
+.certs-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+}
+
+.cert-card {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 22px 24px;
+  background: rgba(255,255,255,0.03);
+  border: 1px solid rgba(255,255,255,0.07);
+  border-radius: 12px;
+  text-decoration: none;
+  color: inherit;
+  position: relative;
+  transition: background 0.3s ease, border-color 0.3s ease, transform 0.25s ease;
+  overflow: hidden;
+}
+
+.cert-card::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 3px;
+  background: var(--cert-color, #14b8a6);
+  border-radius: 12px 0 0 12px;
+  opacity: 0.7;
+}
+
+.cert-card:hover {
+  background: rgba(255,255,255,0.06);
+  border-color: rgba(255,255,255,0.15);
+  transform: translateY(-2px);
+}
+
+.cert-icon {
+  font-size: 36px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+}
+
+.cert-info {
+  flex: 1;
+}
+
+.cert-info h4 {
+  margin: 0 0 4px 0;
+  font-size: 15px;
+  font-weight: 600;
+  color: #eae5ec;
+  letter-spacing: 0.3px;
+}
+
+.cert-info p {
+  margin: 0;
+  font-size: 12px;
+  color: rgba(255,255,255,0.4);
+  letter-spacing: 0.5px;
+}
+
+.cert-year {
+  display: inline-block;
+  margin-top: 6px;
+  font-size: 11px;
+  color: #14b8a6;
+  letter-spacing: 1px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.cert-arrow {
+  font-size: 18px;
+  color: rgba(255,255,255,0.25);
+  transition: color 0.3s ease, transform 0.3s ease;
+  flex-shrink: 0;
+}
+
+.cert-card:hover .cert-arrow {
+  color: rgba(255,255,255,0.7);
+  transform: translate(2px, -2px);
+}
+
+@media (min-width: 640px) {
+  .certs-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (min-width: 1024px) {
+  .certs-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+  .cert-info h4 { font-size: 16px; }
+}

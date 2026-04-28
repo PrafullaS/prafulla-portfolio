@@ -70,7 +70,7 @@ const SocialIcons = () => {
           </a>
         </span>
         <span>
-          <a href="https://x.com/<....>" target="_blank">
+          <a href="https://x.com/prafullashinde" target="_blank">
             <FaXTwitter />
           </a>
         </span>
@@ -80,7 +80,12 @@ const SocialIcons = () => {
           </a>
         </span>
       </div>
-      <a className="resume-button" href="#">
+      <a
+        className="resume-button"
+        href="/prafulla-portfolio/PrafullaShindeResume4.pdf"
+        download="PrafullaShindeResume.pdf"
+        data-cursor="disable"
+      >
         <HoverLinks text="RESUME" />
         <span>
           <TbNotes />
