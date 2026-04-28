@@ -58,13 +58,6 @@ const Navbar = () => {
         <a href="/#" className="navbar-title" data-cursor="disable">
           PS
         </a>
-        <a
-          href="mailto:mazaawsdata@gmail.com"
-          className="navbar-connect"
-          data-cursor="disable"
-        >
-          mazaawsdata@gmail.com
-        </a>
         <ul>
           <li>
             <a data-href="#about" href="#about">

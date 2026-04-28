@@ -1,39 +1,38 @@
 import "./styles/Certifications.css";
 import { FaAws } from "react-icons/fa";
-import { SiKubernetes, SiLinux, SiDocker } from "react-icons/si";
 
 const certs = [
   {
     icon: <FaAws />,
-    name: "AWS Certified Solutions Architect",
+    name: "AWS Certified Solutions Architect - Associate",
     issuer: "Amazon Web Services",
-    year: "2023",
+    year: "2025",
     color: "#ff9900",
-    verifyUrl: "https://aws.amazon.com/certification/",
+    verifyUrl: "https://www.credly.com/badges/02c40d58-f81e-4fb4-acf4-824a9dd49ac0/public_url",
   },
+  // {
+  //   icon: <SiKubernetes />,
+  //   name: "Certified Kubernetes Administrator",
+  //   issuer: "Cloud Native Computing Foundation",
+  //   year: "2022",
+  //   color: "#326ce5",
+  //   verifyUrl: "https://www.cncf.io/certification/cka/",
+  // },
+  // {
+  //   icon: <SiDocker />,
+  //   name: "Docker Certified Associate",
+  //   issuer: "Docker Inc.",
+  //   year: "2022",
+  //   color: "#2496ed",
+  //   verifyUrl: "https://www.docker.com/certification/",
+  // },
   {
-    icon: <SiKubernetes />,
-    name: "Certified Kubernetes Administrator",
-    issuer: "Cloud Native Computing Foundation",
-    year: "2022",
-    color: "#326ce5",
-    verifyUrl: "https://www.cncf.io/certification/cka/",
-  },
-  {
-    icon: <SiDocker />,
-    name: "Docker Certified Associate",
-    issuer: "Docker Inc.",
-    year: "2022",
-    color: "#2496ed",
-    verifyUrl: "https://www.docker.com/certification/",
-  },
-  {
-    icon: <SiLinux />,
-    name: "Linux Foundation Certified Engineer",
-    issuer: "The Linux Foundation",
-    year: "2021",
-    color: "#f7c519",
-    verifyUrl: "https://training.linuxfoundation.org/certification/",
+    icon: <FaAws />,
+    name: "AWS Certified DevOps Engineer – Professional",
+    issuer: "Amazon Web Services",
+    year: "2025",
+    color: "#ff9900",
+    verifyUrl: "https://www.credly.com/badges/89ce7450-8d09-4661-b358-6998f97809d9/public_url",
   },
 ];
 
