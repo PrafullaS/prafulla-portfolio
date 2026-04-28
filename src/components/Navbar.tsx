@@ -70,6 +70,16 @@ const Navbar = () => {
               <HoverLinks text="CONTACT" />
             </a>
           </li>
+          <li>
+            <a
+              href="/prafulla-portfolio/PrafullaShindeResume4.pdf"
+              download="PrafullaShindeResume.pdf"
+              className="navbar-resume-btn"
+              data-cursor="disable"
+            >
+              RESUME
+            </a>
+          </li>
         </ul>
       </div>
 
