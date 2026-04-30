@@ -6,10 +6,10 @@ import "./styles/Stats.css";
 gsap.registerPlugin(ScrollTrigger);
 
 const statsData = [
-  { value: 4, suffix: "+", label: "Years of Experience" },
+  { value: 5, suffix: "+", label: "Years of Experience" },
   { value: 50, suffix: "+", label: "Pipelines Built" },
   { value: 3, suffix: "", label: "Cloud Platforms" },
-  { value: 100, suffix: "+", label: "Deployments / Month" },
+  { value: 50, suffix: "+", label: "Deployments / Month" },
 ];
 
 const Stats = () => {

@@ -193,11 +193,24 @@
 }
 
 .landing-name {
-  background: linear-gradient(to right, #5eead4, #a855f7);
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
+  color: #5eead4;
+  display: block !important;
   width: fit-content;
+  margin-top: 10px !important;
+  font-size: clamp(32px, 8vw, 60px) !important;
+  line-height: 1.1 !important;
+  position: relative;
+  z-index: 100;
+}
+
+/* Ensure gradient works even after SplitText manipulation */
+.landing-name, 
+.landing-name div, 
+.landing-name span {
+  -webkit-background-clip: text !important;
+  background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  background-image: linear-gradient(to right, #5eead4, #a855f7) !important;
 }
 
 /* .landing-intro h1 span {
