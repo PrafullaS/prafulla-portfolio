@@ -1,10 +1,8 @@
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import HoverLinks from "./HoverLinks";
 import { gsap } from "gsap";
 import { ScrollSmoother } from "gsap/ScrollSmoother";
-import MatrixRain from "./MatrixRain";
-import { FaTerminal } from "react-icons/fa";
 
 import "./styles/Navbar.css";
 
@@ -12,16 +10,6 @@ gsap.registerPlugin(ScrollSmoother, ScrollTrigger);
 export let smoother: ScrollSmoother;
 
 const Navbar = () => {
-  const [isGeekMode, setIsGeekMode] = useState(false);
-
-  useEffect(() => {
-    if (isGeekMode) {
-      document.body.classList.add("geek-mode");
-    } else {
-      document.body.classList.remove("geek-mode");
-    }
-  }, [isGeekMode]);
-
   useEffect(() => {
     smoother = ScrollSmoother.create({
       wrapper: "#smooth-wrapper",
@@ -75,15 +63,6 @@ const Navbar = () => {
             </a>
           </li>
           <li>
-            <button
-              className={`geek-mode-toggle ${isGeekMode ? "active" : ""}`}
-              onClick={() => setIsGeekMode(!isGeekMode)}
-              data-cursor="disable"
-            >
-              <FaTerminal /> {isGeekMode ? "SYS NORMAL" : "GEEK MODE"}
-            </button>
-          </li>
-          <li>
             <a
               href="/prafulla-portfolio/PrafullaShindeResume4.pdf"
               download="PrafullaShindeResume.pdf"
@@ -95,8 +74,6 @@ const Navbar = () => {
           </li>
         </ul>
       </div>
-
-      {isGeekMode && <MatrixRain />}
 
       <div className="landing-circle1"></div>
       <div className="landing-circle2"></div>
