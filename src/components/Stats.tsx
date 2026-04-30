@@ -39,7 +39,7 @@ const Stats = () => {
   return (
     <div className="stats-section" ref={sectionRef}>
       {statsData.map((stat, i) => (
-        <div className="stats-card" key={i}>
+        <div className="stats-card glass-card hover-glow" key={i}>
           <div className="stats-value">
             <span className="stats-number">0</span>
             <span className="stats-suffix">{stat.suffix}</span>

@@ -51,7 +51,7 @@ const Certifications = () => {
               href={cert.verifyUrl}
               target="_blank"
               rel="noreferrer"
-              className="cert-card"
+              className="cert-card glass-card hover-glow"
               data-cursor="disable"
               style={{ "--cert-color": cert.color } as React.CSSProperties}
             >

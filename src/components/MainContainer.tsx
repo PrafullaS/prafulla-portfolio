@@ -33,6 +33,7 @@ const MainContainer = ({ children }: PropsWithChildren) => {
 
   return (
     <div className="container-main">
+      <div className="mesh-bg"></div>
       <Cursor />
       <Navbar />
       <SocialIcons />

@@ -42,7 +42,7 @@ const Navbar = () => {
   }, []);
   return (
     <>
-      <div className="header">
+      <div className="header glass-nav">
         <a href="/#" className="navbar-title" data-cursor="disable">
           PS
         </a>

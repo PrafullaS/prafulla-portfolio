@@ -14,13 +14,13 @@ const About = () => {
             />
             <div className="about-badges">
               <span className="about-badge">📍 Pune, India</span>
-              <span className="about-badge">💼 4+ Yrs XP</span>
+              <span className="about-badge">💼 6+ Yrs XP</span>
               <span className="about-badge about-badge-green">🟢 Open to Work</span>
             </div>
           </div>
           <div className="about-text">
             <p className="para">
-              DevOps Engineer with 4+ years of experience — a strategic DevOps lead
+              DevOps Engineer with 6+ years of experience — a strategic DevOps lead
               specialising in <strong>microservices migration</strong> and{" "}
               <strong>enterprise-scale CI/CD automation</strong>. Expert in designing
               resilient, high-performance infrastructure using{" "}

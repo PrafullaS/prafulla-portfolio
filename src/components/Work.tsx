@@ -604,7 +604,7 @@ const Work = () => {
             >
               {achievements.map((item, index) => (
                 <div className="carousel-slide" key={index}>
-                  <div className="carousel-content">
+                  <div className="carousel-content glass-card hover-glow">
                     <div className="carousel-info">
                       <div className="carousel-top-meta">
                         <span className="slide-num">0{index + 1}</span>

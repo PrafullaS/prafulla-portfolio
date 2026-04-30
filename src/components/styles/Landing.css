@@ -170,7 +170,7 @@
 
 .landing-intro {
   position: absolute;
-  z-index: 9;
+  z-index: 50;
   top: 12%;
   left: 0;
 }
@@ -192,6 +192,14 @@
   font-family: "Geist", sans-serif;
 }
 
+.landing-name {
+  background: linear-gradient(to right, #5eead4, #a855f7);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  width: fit-content;
+}
+
 /* .landing-intro h1 span {
    font-weight: 200; 
 } */
@@ -202,7 +210,7 @@
   transform: translateX(50%);
   bottom: 40px;
   top: inherit;
-  z-index: 9;
+  z-index: 50;
 }
 
 .landing-info h3 {
