@@ -83,6 +83,12 @@
 .carousel-wrapper {
   position: relative;
   width: 100%;
+  /* Reserve space for the absolutely-positioned arrows so they don't
+     sit outside the viewport on wide screens */
+  padding: 0 80px;
+  /* Extra left padding to clear fixed social icons bar */
+  padding-left: 100px;
+  box-sizing: border-box;
 }
 
 .carousel-track-container {
@@ -275,11 +281,11 @@
 }
 
 .carousel-arrow-left {
-  left: -70px;
+  left: 10px;
 }
 
 .carousel-arrow-right {
-  right: -70px;
+  right: 10px;
 }
 
 .carousel-dots {
@@ -310,14 +316,18 @@
   .work-section h2 {
     font-size: 50px;
   }
+}
 
-  .carousel-arrow-left {
-    left: 10px;
+@media (max-width: 1025px) {
+  .work-section h2 {
+    font-size: 36px;
   }
-
-  .carousel-arrow-right {
-    right: 10px;
+  .carousel-wrapper {
+    padding: 0 60px;
+    padding-left: 60px;
   }
+  .carousel-arrow-left { left: 6px; }
+  .carousel-arrow-right { right: 6px; }
 }
 
 @media (max-width: 1025px) {

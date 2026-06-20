@@ -43,7 +43,7 @@ const Navbar = () => {
   return (
     <>
       <div className="header glass-nav">
-        <a href="/#" className="navbar-title" data-cursor="disable">
+        <a href="/prafulla-portfolio/" className="navbar-title" data-cursor="disable">
           PS
         </a>
         <ul>

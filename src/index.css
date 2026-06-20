@@ -35,6 +35,14 @@ h6 {
 
 body {
   overflow: hidden;
+  margin: 0;
+  height: auto;
+  background-color: #050810;
+  flex-grow: 1;
+  --cWidth: calc(100% - 30px);
+  --cMaxWidth: 1920px;
+  max-width: 100vw;
+  overflow-x: hidden;
 }
 
 a {
@@ -61,17 +69,6 @@ main {
   100% {
     opacity: 1;
   }
-}
-
-body {
-  margin: 0;
-  height: auto;
-  background-color: #050810;
-  flex-grow: 1;
-  --cWidth: calc(100% - 30px);
-  --cMaxWidth: 1920px;
-  max-width: 100vw;
-  overflow-x: hidden;
 }
 
 .main-body {
@@ -187,7 +184,4 @@ body {
   border-color: rgba(20, 184, 166, 0.3);
 }
 
-/* Base styling overrides for mesh-bg */
-body {
-  background-color: transparent; /* Let mesh-bg show */
-}
+

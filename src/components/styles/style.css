@@ -18,3 +18,22 @@
   transform: translateY(-100%);
   color: var(--accentColor);
 }
+
+/* ── Global shared utility classes ── */
+.title {
+  font-size: 25px;
+  text-transform: uppercase;
+  letter-spacing: 7px;
+  font-weight: 400;
+  color: var(--accentColor);
+  margin: 0 0 8px 0;
+}
+
+.section-container {
+  width: var(--cWidth);
+  max-width: var(--cMaxWidth);
+  margin: auto;
+  position: relative;
+  z-index: 10;
+  background-color: var(--backgroundColor);
+}

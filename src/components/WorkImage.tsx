@@ -64,7 +64,7 @@ const WorkImage = (props: Props) => {
       setIsVideo(true);
       // Using a try-catch for better reliability
       try {
-        const response = await fetch(`src/assets/${props.video}`);
+        const response = await fetch(`/prafulla-portfolio/assets/${props.video}`);
         const blob = await response.blob();
         const blobUrl = URL.createObjectURL(blob);
         setVideo(blobUrl);

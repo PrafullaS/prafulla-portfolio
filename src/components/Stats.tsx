@@ -6,10 +6,10 @@ import "./styles/Stats.css";
 gsap.registerPlugin(ScrollTrigger);
 
 const statsData = [
-  { value: 5, suffix: "+", label: "Years of Experience" },
-  { value: 50, suffix: "+", label: "Pipelines Built" },
-  { value: 3, suffix: "", label: "Cloud Platforms" },
-  { value: 50, suffix: "+", label: "Deployments / Month" },
+  { value: 6, suffix: "+", label: "Years of Experience", decimals: 1 },
+  { value: 50, suffix: "+", label: "Pipelines Built", decimals: 0 },
+  { value: 40, suffix: "%", label: "Faster Deployments", decimals: 0 },
+  { value: 99.9, suffix: "%", label: "Uptime Maintained", decimals: 1 },
 ];
 
 const Stats = () => {
@@ -18,11 +18,11 @@ const Stats = () => {
   useEffect(() => {
     const counters = sectionRef.current?.querySelectorAll(".stats-number");
     counters?.forEach((counter, i) => {
-      const target = statsData[i].value;
+      const { value, decimals } = statsData[i];
       const obj = { val: 0 };
       gsap.to(obj, {
-        val: target,
-        duration: 2,
+        val: value,
+        duration: 2.2,
         ease: "power2.out",
         scrollTrigger: {
           trigger: sectionRef.current,
@@ -30,7 +30,8 @@ const Stats = () => {
           once: true,
         },
         onUpdate: () => {
-          counter.textContent = Math.floor(obj.val).toString();
+          counter.textContent =
+            decimals > 0 ? obj.val.toFixed(decimals) : Math.floor(obj.val).toString();
         },
       });
     });

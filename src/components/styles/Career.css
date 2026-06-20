@@ -8,8 +8,8 @@
   opacity: 1;
   height: auto;
   margin: auto;
-  margin-bottom: 250px;
-  padding: 120px 0px;
+  margin-bottom: 100px;
+  padding: 100px 0px;
 }
 
 .career-section h2 {
@@ -53,9 +53,11 @@
 
 .career-info-in {
   display: flex;
-  width: 40%;
+  width: 45%;
   justify-content: space-between;
-  gap: 50px;
+  align-items: flex-start;
+  gap: 20px;
+  flex-wrap: wrap;
 }
 
 .career-info h3 {
@@ -66,11 +68,12 @@
 }
 
 .career-info h4 {
-  font-size: 33px;
-  line-height: 30px;
+  font-size: 22px;
+  line-height: 28px;
   letter-spacing: 0.8px;
-  font-weight: 500;
+  font-weight: 600;
   margin: 0;
+  color: #eae5ec;
 }
 
 .career-info h5 {
@@ -179,8 +182,8 @@
 @media only screen and (max-width: 1025px) {
   .career-section {
     padding: 70px 0px;
-    padding-top: 220px;
-    margin-top: -200px;
+    padding-top: 80px;
+    margin-top: 0;
     margin-bottom: 0;
   }
 }
@@ -234,11 +237,104 @@
   }
 
   .career-section {
-    padding-top: 90px;
-    margin-top: -70px;
-
+    padding-top: 60px;
+    margin-top: 0;
     align-items: start;
     place-items: inherit;
     justify-content: left;
   }
+}
+
+/* ── Enhanced career detail styles ── */
+.career-location {
+  font-size: 12px;
+  color: rgba(255,255,255,0.35);
+  letter-spacing: 0.7px;
+  margin-top: 4px;
+  display: block;
+}
+
+.career-tag {
+  display: inline-flex;
+  align-items: center;
+  padding: 4px 14px;
+  border-radius: 20px;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  flex-shrink: 0;
+  align-self: flex-start;
+}
+
+.career-tag-now {
+  background: rgba(94, 234, 212, 0.12);
+  border: 1px solid rgba(94, 234, 212, 0.4);
+  color: #5eead4;
+}
+
+.career-tag-prev {
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.12);
+  color: rgba(255,255,255,0.45);
+}
+
+.career-details {
+  width: 50%;
+}
+
+.career-period {
+  font-size: 12px;
+  color: rgba(255,255,255,0.35);
+  letter-spacing: 1px;
+  margin: 0 0 12px;
+  text-transform: uppercase;
+}
+
+.career-bullets {
+  padding-left: 18px;
+  margin: 0;
+}
+
+.career-bullets li {
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 22px;
+  color: rgba(255,255,255,0.7);
+  margin-bottom: 8px;
+  padding-left: 4px;
+}
+
+.career-bullets li::marker {
+  color: #5eead4;
+}
+
+.career-tech-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 14px;
+}
+
+.career-tech-tag {
+  display: inline-block;
+  padding: 3px 10px;
+  background: rgba(94, 234, 212, 0.07);
+  border: 1px solid rgba(94, 234, 212, 0.2);
+  border-radius: 6px;
+  font-size: 11px;
+  color: #5eead4;
+  letter-spacing: 0.5px;
+}
+
+@media only screen and (max-width: 900px) {
+  .career-details {
+    width: 100%;
+    padding-left: 10%;
+    box-sizing: border-box;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .career-details { padding-left: 5%; }
 }

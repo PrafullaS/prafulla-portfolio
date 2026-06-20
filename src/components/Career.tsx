@@ -1,57 +1,60 @@
-// import "./styles/Career.css";
-
-// const Career = () => {
-//   return (
-//     <div className="career-section section-container">
-//       <div className="career-container">
-//         <h2>
-//           My career <span>&</span>
-//           <br /> experience
-//         </h2>
-//         <div className="career-info">
-//           <div className="career-timeline">
-//             <div className="career-dot"></div>
-//           </div>
-//           <div className="career-info-box">
-//             <div className="career-info-in">
-//               <div className="career-role">
-//                 <h4>Senior DevOps Engineer</h4>
-//                 <h5>Tata Consultancy Services</h5>
-//               </div>
-//               <h3>2020</h3>
-//             </div>
-//             <p>
-//               Led two development teams on Mpro, a large-scale insurance
-//               operations platform. Developed multiple modules using React.js &
-//               migrated critical functionalities to Node.js microservices.
-//             </p>
-//           </div>
-//           <div className="career-info-box">
-//             <div className="career-info-in">
-//               <div className="career-role">
-//                 <h4>DevOps Engineer</h4>
-//                 <h5>Citi India</h5>
-//               </div>
-//               <h3>NOW</h3>
-//             </div>
-//             <p>
-//               Building Solid, a proprietary low-code platform using Angular,
-//               Next.js & NestJS. Delivering production-ready CMS-based projects
-//               including e-commerce, CRM, and import-export automation systems.
-//             </p>
-//           </div>
-//         </div>
-//       </div>
-//     </div>
-//   );
-// };
-
-// export default Career;
-
-
+import { useEffect, useRef } from "react";
 import "./styles/Career.css";
 
+const experiences = [
+  {
+    role: "DevOps / Cloud Engineer",
+    company: "Citi India",
+    location: "Pune, Maharashtra",
+    period: "July 2021 – Present",
+    tag: "NOW",
+    tagClass: "career-tag-now",
+    bullets: [
+      "Spearheaded migration of on-premises applications to AWS, provisioning infrastructure with Terraform — reducing infrastructure overhead by 25%.",
+      "Designed, deployed, and managed multi-tenant Kubernetes (EKS) clusters with Helm-based packaging and auto-scaling, maintaining 99.9% uptime.",
+      "Built secure GitLab CI/CD pipelines with integrated vulnerability scanning, cutting release delivery timelines by 35% under strict compliance.",
+      "Automated AWS resource provisioning using modular Terraform blueprints, enforcing organizational security baselines and unified IAM role structures.",
+      "Constructed unified monitoring with Prometheus & Grafana across AWS and EKS, decreasing Mean Time to Resolution (MTTR) by 40%.",
+    ],
+    tech: ["AWS", "Kubernetes", "GitLab CI", "Terraform", "Prometheus", "Helm", "EKS"],
+  },
+  {
+    role: "System Engineer / DevOps Engineer",
+    company: "Tata Consultancy Services (TCS)",
+    location: "Pune, Maharashtra",
+    period: "Sept 2019 – July 2021",
+    tag: "2019–2021",
+    tagClass: "career-tag-prev",
+    bullets: [
+      "Re-architected Jenkins master-slave pipeline clusters with declarative & freestyle configs, compressing deployment cycle time by 40%.",
+      "Engineered S3 lifecycle policies and storage-class tiering rules that cut annual cloud storage spend by 20%.",
+      "Implemented Chef-driven configuration management across enterprise nodes with structured Git branching strategies.",
+      "Deployed Nagios, CloudWatch, and CloudTrail monitoring across the full AWS stack for proactive defect detection.",
+      "Mentored junior engineers on Terraform & AWS IaC standards via structured code reviews and architectural guidance.",
+      "Automated Maven-driven build pipelines to produce production-ready WAR artifacts for Tomcat deployment.",
+    ],
+    tech: ["Jenkins", "AWS", "Chef", "Ansible", "Nagios", "CloudWatch", "Maven", "Terraform"],
+  },
+];
+
 const Career = () => {
+  const timelineRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const el = timelineRef.current;
+    if (!el) return;
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          el.style.maxHeight = "100%";
+        }
+      },
+      { threshold: 0.1 }
+    );
+    observer.observe(el);
+    return () => observer.disconnect();
+  }, []);
+
   return (
     <div className="career-section section-container">
       <div className="career-container">
@@ -60,43 +63,35 @@ const Career = () => {
           <br /> experience
         </h2>
         <div className="career-info">
-          <div className="career-timeline">
+          <div className="career-timeline" ref={timelineRef}>
             <div className="career-dot"></div>
           </div>
 
-          {/* Current Role: Citi India */}
-          <div className="career-info-box">
-            <div className="career-info-in">
-              <div className="career-role">
-                <h4>DevOps Engineer</h4>
-                <h5>Citi India</h5>
+          {experiences.map((exp, i) => (
+            <div className="career-info-box" key={i}>
+              <div className="career-info-in">
+                <div className="career-role">
+                  <h4>{exp.role}</h4>
+                  <h5>{exp.company}</h5>
+                  <span className="career-location">{exp.location}</span>
+                </div>
+                <div className={`career-tag ${exp.tagClass}`}>{exp.tag}</div>
               </div>
-              <h4>NOW</h4>
-            </div>
-            <p>
-              Spearheading microservices migration and CI/CD automation for enterprise
-              applications. Optimizing scalable infrastructure using OpenShift,
-              Ansible, and Harness to ensure high-performance delivery within
-              stringent regulatory frameworks.
-            </p>
-          </div>
-
-          {/* Previous Role: TCS */}
-          <div className="career-info-box">
-            <div className="career-info-in">
-              <div className="career-role">
-                <h4>DevOps Consultant</h4>
-                <h5>Tata Consultancy Services</h5>
+              <div className="career-details">
+                <p className="career-period">{exp.period}</p>
+                <ul className="career-bullets">
+                  {exp.bullets.map((b, j) => (
+                    <li key={j}>{b}</li>
+                  ))}
+                </ul>
+                <div className="career-tech-row">
+                  {exp.tech.map((t, k) => (
+                    <span className="career-tech-tag" key={k}>{t}</span>
+                  ))}
+                </div>
               </div>
-              <h5>2020 - 25</h5>
             </div>
-            <p>
-              Pioneered cloud-native solutions leveraging AWS, Terraform (IaC), and Jenkins
-              to architect end-to-end CI/CD pipelines. Managed resilient infrastructure
-              across EC2, S3, and RDS while automating configurations with Chef and
-              proactive monitoring Cloud watch & Trail, AppDynamics.
-            </p>
-          </div>
+          ))}
         </div>
       </div>
     </div>

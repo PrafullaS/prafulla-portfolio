@@ -201,16 +201,21 @@
   line-height: 1.1 !important;
   position: relative;
   z-index: 100;
+  /* Gradient applied to the static container, not per GSAP-split node */
+  background: linear-gradient(to right, #5eead4, #a855f7);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
-/* Ensure gradient works even after SplitText manipulation */
-.landing-name, 
-.landing-name div, 
+/* Only restore fill-color on GSAP split child nodes when gradient is inherited */
+.landing-name div,
 .landing-name span {
-  -webkit-background-clip: text !important;
-  background-clip: text !important;
-  -webkit-text-fill-color: transparent !important;
-  background-image: linear-gradient(to right, #5eead4, #a855f7) !important;
+  /* Inherit parent gradient clip — don't set a new background per character */
+  background: inherit;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 /* .landing-intro h1 span {
@@ -276,11 +281,9 @@ h2.landing-info-h2 {
   width: 100%;
   height: 120%;
   z-index: 3;
-  background-image: linear-gradient(0deg,
-      var(--backgroundColor) 40%,
-      rgba(0, 0, 0, 0) 110%);
   top: 0;
   left: 0;
+  pointer-events: none;
 }
 
 @media screen and (min-width: 500px) {
@@ -426,6 +429,44 @@ h2.landing-info-h2 {
   text-transform: uppercase;
 }
 
+.landing-subtitle {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  margin-top: 10px;
+  font-size: 14px;
+  color: rgba(255,255,255,0.55);
+  letter-spacing: 1px;
+}
+
+.landing-role-label {
+  color: rgba(255,255,255,0.4);
+}
+
+.landing-role-type {
+  color: #5eead4;
+  font-weight: 600;
+  min-width: 180px;
+}
+
+.landing-cursor {
+  color: #5eead4;
+  animation: blink 1s step-end infinite;
+  font-weight: 300;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+.landing-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-top: 12px;
+}
+
 .landing-available {
   display: inline-flex;
   align-items: center;
@@ -435,7 +476,12 @@ h2.landing-info-h2 {
   color: #4ade80;
   font-weight: 500;
   text-transform: uppercase;
-  margin-top: 4px;
+}
+
+.landing-location {
+  font-size: 11px;
+  color: rgba(255,255,255,0.35);
+  letter-spacing: 1px;
 }
 
 .landing-dot {
@@ -450,4 +496,38 @@ h2.landing-info-h2 {
 @keyframes pulse-dot {
   0%, 100% { box-shadow: 0 0 0 0 rgba(74, 222, 128, 0.6); }
   50% { box-shadow: 0 0 0 6px rgba(74, 222, 128, 0); }
+}
+
+.landing-stats-row {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-top: 20px;
+}
+
+.landing-stat {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.landing-stat-val {
+  font-size: 20px;
+  font-weight: 700;
+  color: #5eead4;
+  line-height: 1;
+}
+
+.landing-stat-lbl {
+  font-size: 9px;
+  color: rgba(255,255,255,0.35);
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  margin-top: 2px;
+}
+
+.landing-stat-divider {
+  width: 1px;
+  height: 30px;
+  background: rgba(255,255,255,0.12);
 }

@@ -14,29 +14,51 @@ const About = () => {
             />
             <div className="about-badges">
               <span className="about-badge">📍 Pune, India</span>
-              <span className="about-badge">💼 5+ Yrs XP</span>
+              <span className="about-badge">💼 6+ Yrs XP</span>
               <span className="about-badge about-badge-green">🟢 Open to Work</span>
+            </div>
+            <div className="about-contact-pills">
+              <a href="mailto:mazaawsdata@gmail.com" className="about-pill" data-cursor="disable">
+                ✉ mazaawsdata@gmail.com
+              </a>
+              <a href="tel:+919834196375" className="about-pill" data-cursor="disable">
+                📞 +91 9834196375
+              </a>
             </div>
           </div>
           <div className="about-text">
             <p className="para">
-              DevOps Engineer with 5+ years of experience — a strategic DevOps lead
-              specialising in <strong>microservices migration</strong> and{" "}
-              <strong>enterprise-scale CI/CD automation</strong>. Expert in designing
-              resilient, high-performance infrastructure using{" "}
-              <strong>OpenShift, Ansible, and Docker</strong>. Proven track record of
-              delivering measurable business value by integrating{" "}
-              <strong>Harness, Tekton, and Jenkins</strong> within complex,
-              high-compliance regulatory frameworks.
+              DevOps Engineer with 6+ years of experience specializing in building
+              secure, high-performance AWS cloud infrastructures and automating
+              end-to-end CI/CD pipelines. Proficient in managing scalable containerized
+              applications with Kubernetes (EKS), orchestrating Infrastructure as Code via
+              Terraform, and streamlining configuration management.
             </p>
             <p className="para">
-              Currently at <strong>Citi India</strong>, spearheading cloud-native
-              transformation. Previously at <strong>TCS</strong>, architecting
-              end-to-end pipelines and managing resilient multi-cloud infrastructure.
+              Currently at Citi India as a DevOps/Cloud Engineer, spearheading
+              cloud-native transformation — migrating on-premises applications to AWS,
+              building multi-tenant EKS clusters, and designing GitLab CI/CD pipelines
+              with integrated vulnerability scanning. Previously at Tata Consultancy
+              Services (TCS), architecting Jenkins pipelines and managing resilient
+              multi-cloud infrastructure.
             </p>
+            <div className="about-highlights">
+              <div className="about-highlight-item">
+                <span className="about-hl-num">25%</span>
+                <span className="about-hl-txt">Infrastructure overhead reduced</span>
+              </div>
+              <div className="about-highlight-item">
+                <span className="about-hl-num">35%</span>
+                <span className="about-hl-txt">Faster release delivery</span>
+              </div>
+              <div className="about-highlight-item">
+                <span className="about-hl-num">40%</span>
+                <span className="about-hl-txt">MTTR improvement</span>
+              </div>
+            </div>
             <div className="about-links">
               <a
-                href="https://www.linkedin.com/in/prafulla-shinde/"
+                href="https://www.linkedin.com/in/prafulla-shinde-devops"
                 target="_blank"
                 rel="noreferrer"
                 className="about-link"
@@ -45,7 +67,7 @@ const About = () => {
                 LinkedIn ↗
               </a>
               <a
-                href="https://github.com/PrafullaS"
+                href="https://github.com/prafullashinde"
                 target="_blank"
                 rel="noreferrer"
                 className="about-link"

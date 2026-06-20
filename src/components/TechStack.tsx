@@ -13,22 +13,22 @@ import {
 
 const textureLoader = new THREE.TextureLoader();
 const imageUrls = [
-  // "./images/react2.webp",
-  "./images/tf2.png",
-  "./images/docker.png",
-  "./images/Openshift.png",
-  "./images/aws2.png",
-  "./images/GCP2.png",
-  "./images/ansible2.png",
-  "./images/bash2.png",
-  "./images/ghe.png",
-  "./images/BB2.png",
-  "./images/jenkins2.png",
-  "./images/harness2.png",
-  "./images/tekton2.png",
-  "./images/maven2.png",
-  "./images/grafana2.png",
-  "./images/helm2.png",
+  // "/prafulla-portfolio/images/react2.webp",
+  "/prafulla-portfolio/images/tf2.png",
+  "/prafulla-portfolio/images/docker.png",
+  "/prafulla-portfolio/images/Openshift.png",
+  "/prafulla-portfolio/images/aws2.png",
+  "/prafulla-portfolio/images/GCP2.png",
+  "/prafulla-portfolio/images/ansible2.png",
+  "/prafulla-portfolio/images/bash2.png",
+  "/prafulla-portfolio/images/ghe.png",
+  "/prafulla-portfolio/images/BB2.png",
+  "/prafulla-portfolio/images/jenkins2.png",
+  "/prafulla-portfolio/images/harness2.png",
+  "/prafulla-portfolio/images/tekton2.png",
+  "/prafulla-portfolio/images/maven2.png",
+  "/prafulla-portfolio/images/grafana2.png",
+  "/prafulla-portfolio/images/helm2.png",
 ];
 const textures = imageUrls.map((url) => textureLoader.load(url));
 
@@ -207,7 +207,7 @@ const TechStack = () => {
           ))}
         </Physics>
         <Environment
-          files="./models/char_enviorment.hdr"
+          files="/prafulla-portfolio/models/char_enviorment.hdr"
           environmentIntensity={0.5}
           environmentRotation={[0, 4, 2]}
         />
