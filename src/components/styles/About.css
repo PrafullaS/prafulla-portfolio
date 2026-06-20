@@ -15,7 +15,6 @@
   padding-bottom: 0;
   width: 100%;
   max-width: calc(100% - 15px);
-  background-color: var(--backgroundColor);
 }
 .about-me h3 {
   font-size: 25px;
