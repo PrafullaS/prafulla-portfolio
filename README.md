@@ -1,40 +1,119 @@
-# My Portfolio Wesbite - Overview 🚀
+# 🚀 Prafulla Shinde - DevOps Portfolio Website
 
-This repository contains the open source version of my porfolio website.
-Do check it out!
+Welcome to my personal portfolio website repository!
 
-## Instructions 🛠️
+This portfolio showcases my professional journey, technical expertise, projects, certifications, and hands-on experience in **DevOps, Cloud Computing, Infrastructure Automation, and Container Orchestration**.
 
-I have modified the gsap club plugins with the trial plugins, but with the trial plugin you cannot host it🔴. So for Club plugins, Check out here: https://gsap.com/docs/v3/Installation/
+The website serves as a central hub for recruiters, hiring managers, and fellow engineers to explore my skills, achievements, and contributions.
 
-**Techstack** - AWS Cloud, Docker, OpenShift, Terraform, Google Cloud, Shell Script, Jenkins, GitHub, Maven, Ansible, Kubernetes.
+---
 
+## 🌟 Features
 
-![Portfolio-Preview](public/images/prafulla_preview.png)
+* Professional portfolio and resume showcase
+* Project highlights and technical implementations
+* DevOps and Cloud skill demonstrations
+* Responsive design for desktop and mobile devices
+* Interactive animations powered by GSAP
+* Fast and optimized user experience
+* Hosted using GitHub Pages
 
-## Hosting on GitHub Pages 🌐
+---
 
-Follow these steps to deploy this project on GitHub Pages:
+## 🛠️ Technology Stack
 
-### Prerequisites
-- A [GitHub](https://github.com) account
-- [Node.js](https://nodejs.org/) and npm installed
-- Git installed and configured
+### Cloud Platforms
 
-### Steps
+* AWS
+* Google Cloud Platform (GCP)
 
-**1. Clone the repository**
+### DevOps & Automation
+
+* Docker
+* Kubernetes
+* OpenShift
+* Terraform
+* Ansible
+* Jenkins
+* GitHub Actions
+
+### Build & Version Control
+
+* Git
+* GitHub
+* Maven
+
+### Scripting & Operating Systems
+
+* Shell Scripting
+* Linux
+
+### Frontend
+
+* React
+* TypeScript
+* Vite
+* GSAP
+
+---
+
+## 📸 Portfolio Preview
+
+![Portfolio Preview](public/images/prafulla_preview.png)
+
+---
+
+## ⚠️ GSAP Club Plugin Notice
+
+This project contains modified GSAP Club plugins for development and learning purposes.
+
+Please note:
+
+* GSAP trial plugins cannot be legally hosted in production environments.
+* Before deploying publicly, replace trial plugins with licensed Club GreenSock plugins.
+
+Official Installation Guide:
+
+https://gsap.com/docs/v3/Installation/
+
+---
+
+# 🌐 Deploying to GitHub Pages
+
+Follow the steps below to host your own version of this portfolio using GitHub Pages.
+
+## Prerequisites
+
+Ensure you have the following installed:
+
+* Git
+* Node.js
+* npm
+* GitHub Account
+
+---
+
+## Step 1: Clone the Repository
+
 ```bash
 git clone https://github.com/PrafullaS/prafulla-portfolio.git
 cd prafulla-portfolio
 ```
 
-**2. Install dependencies**
+---
+
+## Step 2: Install Dependencies
+
 ```bash
 npm install
 ```
 
-**3. Update `vite.config.ts`** — set the `base` to your repo name:
+---
+
+## Step 3: Configure Vite
+
+Update the `base` property inside `vite.config.ts`:
+
 ```ts
 export default defineConfig({
   base: "/prafulla-portfolio/",
@@ -42,31 +121,101 @@ export default defineConfig({
 });
 ```
 
-**4. Update `package.json`** — set the `homepage` field:
-```json
-"homepage": "https://<your-github-username>.github.io/prafulla-portfolio/"
-```
-
-**5. Deploy to GitHub Pages**
-```bash
-npm run deploy
-```
-This will build the project and push the output to the `gh-pages` branch automatically.
-
-**6. Enable GitHub Pages**
-- Go to your repository on GitHub
-- Navigate to **Settings → Pages**
-- Under **Source**, select the `gh-pages` branch and click **Save**
-
-**7. Visit your live site** 🎉
-```
-https://<your-github-username>.github.io/prafulla-portfolio/
-```
-
-> **Note:** For future updates, just run `npm run deploy` again to redeploy.
+Replace `prafulla-portfolio` with your repository name if different.
 
 ---
 
-## License
+## Step 4: Configure Homepage URL
 
-This project is open source and available under the [MIT License](LICENSE).
+Update the `homepage` field in `package.json`:
+
+```json
+{
+  "homepage": "https://<github-username>.github.io/prafulla-portfolio/"
+}
+```
+
+---
+
+## Step 5: Deploy the Website
+
+Run:
+
+```bash
+npm run deploy
+```
+
+This command will:
+
+* Build the application
+* Generate production artifacts
+* Push the build output to the `gh-pages` branch
+
+---
+
+## Step 6: Enable GitHub Pages
+
+Navigate to:
+
+```text
+Repository → Settings → Pages
+```
+
+Under **Source**:
+
+* Select `Deploy from a branch`
+* Choose `gh-pages`
+* Click **Save**
+
+---
+
+## Step 7: Access Your Website
+
+Your portfolio will be available at:
+
+```text
+https://<github-username>.github.io/prafulla-portfolio/
+```
+
+---
+
+## 🔄 Future Updates
+
+Whenever you make changes:
+
+```bash
+npm run deploy
+```
+
+The website will automatically be rebuilt and redeployed.
+
+---
+
+## 📬 Contact
+
+Feel free to connect with me for:
+
+* DevOps Opportunities
+* Cloud Engineering Roles
+* Infrastructure Automation Projects
+* Open Source Collaborations
+
+### Connect With Me
+
+* LinkedIn
+* GitHub
+* Portfolio Website
+
+(Add your links here)
+
+---
+
+## 📄 License
+
+This project is licensed under the MIT License.
+
+See the [LICENSE](LICENSE) file for details.
+
+---
+
+⭐ If you found this project useful, consider giving it a star on GitHub.
