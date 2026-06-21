@@ -151,9 +151,7 @@ main {
 }
 
 .glass-nav {
-  background: transparent !important;
-  backdrop-filter: blur(8px) !important;
-  -webkit-backdrop-filter: blur(8px) !important;
+  background: rgba(8, 11, 18, 0.96) !important;
   border-bottom: 1px solid rgba(255, 255, 255, 0.05);
 }
 
@@ -184,4 +182,4 @@ main {
   border-color: rgba(20, 184, 166, 0.3);
 }
 
-
+
